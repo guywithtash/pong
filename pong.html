@@ -1,4 +1,4 @@
-<canvas id="tetris" width="500" height="500"> </canvas>
+<canvas id="pong" width="500" height="500"> </canvas>
 <script>
     var c = document.getElementById("pong").getContext("2d");
     
@@ -21,5 +21,31 @@
         for (var i = 0; i <= 100; i++) {
         map[i] = new Array(50);
         }
-
+        
+        function bounce(){
+            var n = b.d += 180;
+            if (n > 360){
+                b.d = n - 360;
+            }else {b.d = n;
+            }
+        }
+        
+        function something(py){
+            for (i = py - 2; i = py + 2; i ++){
+                if (b.y == py){
+                    return true;
+                }
+            }
+        }
+        
+        function checkbounce(){
+        if (b.x == 100 || b.y == 100 || b.x == 0 || b.y == 0){
+            if ((something(p1.height) && b.x > 50) || ((something(p2.height) && b.x < 50) || b.y >= 100 || b.y <= 0)){
+                bounce();
+            }else if (b.x > 50){
+                p1.score ++
+            }
+        }
+        }
+        
 </script>
