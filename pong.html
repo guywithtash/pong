@@ -1,5 +1,25 @@
-<canvas id="tetris" width="600" height="500"> </canvas>
+<canvas id="tetris" width="500" height="500"> </canvas>
 <script>
-    var c = document.getElementById("tetris").getContext("2d");
+    var c = document.getElementById("pong").getContext("2d");
     
+        var player = {
+         height: 0,
+         score: 0
+        };
+        
+        var ball = {
+            x: 50,
+            y: 50,
+            d: 360,
+        };
+        
+        var p1 = new player;  
+        var p2 = new player;
+        var b = new ball;
+        
+        var map = new Array(100);
+        for (var i = 0; i <= 100; i++) {
+        map[i] = new Array(50);
+        }
+
 </script>
